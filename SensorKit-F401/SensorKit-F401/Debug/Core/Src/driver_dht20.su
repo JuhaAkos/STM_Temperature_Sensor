@@ -1,0 +1,12 @@
+../Core/Src/driver_dht20.c:66:16:a_dht20_iic_read	24	static
+../Core/Src/driver_dht20.c:88:16:a_dht20_iic_write	24	static
+../Core/Src/driver_dht20.c:107:16:a_dht20_calc_crc	24	static
+../Core/Src/driver_dht20.c:141:16:a_dht20_jh_reset_reg	24	static
+../Core/Src/driver_dht20.c:182:9:dht20_init	24	static
+../Core/Src/driver_dht20.c:279:9:dht20_deinit	16	static
+../Core/Src/driver_dht20.c:317:9:dht20_read_temperature_humidity	40	static
+../Core/Src/driver_dht20.c:401:9:dht20_read_temperature	32	static
+../Core/Src/driver_dht20.c:478:9:dht20_read_humidity	32	static
+../Core/Src/driver_dht20.c:552:9:dht20_set_reg	24	static
+../Core/Src/driver_dht20.c:585:9:dht20_get_reg	24	static
+../Core/Src/driver_dht20.c:614:9:dht20_info	16	static
