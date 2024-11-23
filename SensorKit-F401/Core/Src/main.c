@@ -72,7 +72,7 @@ float humidity3=0;
 char humidityString[3];
 
 uint32_t potValue=0;
-uint16_t adcValues[1]={0};
+uint16_t adcValues[3]={0};
 
 //SSD1315_Object_t ahogyszeretnemcsillagnelegyenott;
 /* USER CODE END PV */
@@ -197,9 +197,8 @@ int main(void)
 		ssd1306_WriteString(humidityString, Font_7x10, White);
 
 		//temp hum OLED end
-
-		//HAL_ADC_Start()
 		//HAL_ADC_PollForConversion(&hadc1, 1);
+		HAL_ADC_Start_DMA(&hadc1, adcValues, 1);
 
 		lightLevel = adcValues[0];
 
@@ -214,7 +213,7 @@ int main(void)
 		*/
 
 
-		/*
+
 		ssd1306_SetCursor(10,50);
 		ssd1306_WriteString("Light: ", Font_7x10, White);
 		lightLevel = adcValues[0];
@@ -223,7 +222,7 @@ int main(void)
 		snprintf(lightLevelString, sizeof(lightLevelString), "%f", lightLevel2);
 
 		ssd1306_WriteString(lightLevelString, Font_7x10, White);
-		*/
+
 
 
 
@@ -231,7 +230,7 @@ int main(void)
 		ssd1306_Fill(Black);
 		ssd1306_SetCursor(10,10);
 
-		HAL_Delay(1000);
+		HAL_Delay(10);
 
 
 
